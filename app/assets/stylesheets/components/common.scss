@@ -1,0 +1,97 @@
+$primary: #36D7B7;
+$secondary: white;
+$text: shade($primary, 50%);
+$shade: shade($primary, 10%);
+$shadow: 4px 4px 5px $shade;
+*{
+  color: $secondary;
+}
+a,button,input[type="submit"]{
+  outline: none;
+  font-weight: light;
+  background-color: $secondary;
+  color: $primary;
+  font-size: 20px;
+  margin:6px;
+  border: 2px solid $secondary;
+  border-radius: 4px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 12px;
+  padding-right: 12px;
+  box-shadow: $shadow;
+  &:hover,&:focus{
+    text-decoration: none;
+    color: $primary;
+    background-color: shade($secondary, 1%);
+
+  }
+}
+body{
+  background: linear-gradient(to right, $primary, tint($shade, 30%));
+}
+
+.flex-container{
+  height: 650px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;;
+  .flex-item{
+    max-width: 50%;
+  }
+  .flex-right{
+    float: right;
+  }
+  .flex-left{
+    float: left;
+  }
+  .flex-top{
+    align-self: flex-start;
+  }
+  .flex-bottom{
+    align-self: flex-bottom;
+  }
+}
+
+.small-link{
+  background: none;
+  border: none;
+  font-weight: light;
+  color: $secondary;
+  font-size: 12px;
+  box-shadow: none;
+  text-shadow: $shadow;
+  &:hover,&:focus{
+    text-decoration: none;
+    color: $secondary;
+    background: none;
+  }
+}
+.panel{
+  box-shadow: $shadow;
+}
+
+.small-link-reverse{
+  @extend .small-link;
+  color: $primary;
+  text-shadow: none;
+  &:hover,&:focus{
+    color: $primary;
+  }
+}
+
+.medium-link{
+  background: none;
+  border: none;
+  font-weight: light;
+  color: $secondary;
+  font-size: 14px;
+  box-shadow: none;
+  &:hover,&:focus{
+    text-decoration: none;
+    color: $secondary;
+    background: none;
+  }
+}

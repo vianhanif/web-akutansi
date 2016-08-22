@@ -1,0 +1,25 @@
+.form-inputs{
+  input,textarea,select{
+    outline: none;
+    color: $primary;
+    font-size: 3em;
+    font-weight: lighter;
+    background-color: $secondary;
+    border: 2px solid $secondary;
+    border-radius: 6px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    box-shadow: $shadow;
+  }
+  input::-webkit-input-placeholder{
+    color: shade($secondary, 20%);
+    font-weight: lighter;
+  }
+}
+.hidden-button{
+  visibility: hidden;
+}

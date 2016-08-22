@@ -1,0 +1,8 @@
+<div class="flex-container">
+  <label class="flex-item title" id="home-title"><%= user_signed_in? ? current_user.email : 'Hi There!!' %></label>
+  <div class="flex-item">
+    <%= link_to 'Go to Journal', jurnals_path, id: 'home-jurnal' if user_signed_in? %>
+    <%= link_to 'Sign Out', destroy_user_session_path, id: 'home-login', method: :delete if user_signed_in? %>
+  </div>
+  <%= link_to 'Sign In', user_session_path, id: 'home-login' if !user_signed_in? %>
+</div>

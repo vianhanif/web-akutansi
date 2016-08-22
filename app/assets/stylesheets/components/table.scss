@@ -1,0 +1,16 @@
+table{
+  thead{
+    tr{
+      th{
+        color: $primary;
+      }
+    }
+  }
+  tbody{
+    tr{
+      td{
+        color: $text;
+      }
+    }
+  }
+}

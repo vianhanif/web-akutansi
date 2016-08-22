@@ -1,0 +1,15 @@
+<div class="flex-container">
+  <%= simple_form_for(@jurnal) do |f| %>
+    <div class="form-inputs">
+      <%= f.association :akun, label_method: :nama, prompt: 'Pilih...', label: false, class: 'flex-input' %>
+      <%= f.input :deskripsi, label: false, placeholder: 'Keterangan', class: 'flex-input' %>
+      <%= f.input :saldo, label: false, placeholder: 'Nominal', class: 'flex-input' %>
+    </div>
+    <div class="flex-item pull-right">
+      <div class="form-actions">
+        <span class="form-notif">press 'Enter' when done</span>
+      </div>
+    </div>
+    <%= f.button :submit, class: 'hidden-button' %>
+  <% end %>
+</div>
