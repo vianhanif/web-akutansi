@@ -1,0 +1,29 @@
+<div class="page-header">
+  <%= link_to new_koleksi_jurnal_path, class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-plus"></span>
+    New Koleksi jurnal
+  <% end %>
+  <h1>Listing koleksi_jurnals</h1>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+            <th>User</th>
+            <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= content_tag_for(:tr, @koleksi_jurnals) do |koleksi_jurnal| %>
+            <td><%= koleksi_jurnal.user %></td>
+            <td><%= link_to 'Show', koleksi_jurnal %></td>
+        <td><%= link_to 'Edit', edit_koleksi_jurnal_path(koleksi_jurnal) %></td>
+        <td><%= link_to 'Destroy', koleksi_jurnal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,37 @@
+<div class="page-header">
+  <%= link_to new_male_transaksi_path, class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-plus"></span>
+    New Male transaksi
+  <% end %>
+  <h1>Listing male_transaksis</h1>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+            <th>Akun</th>
+            <th>Deskripsi</th>
+            <th>Nominal</th>
+            <th>Tipe relasi</th>
+            <th>Jurnal</th>
+            <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= content_tag_for(:tr, @male_transaksis) do |male_transaksi| %>
+            <td><%= male_transaksi.akun %></td>
+            <td><%= male_transaksi.deskripsi %></td>
+            <td><%= male_transaksi.nominal %></td>
+            <td><%= male_transaksi.tipe_relasi %></td>
+            <td><%= male_transaksi.jurnal %></td>
+            <td><%= link_to 'Show', male_transaksi %></td>
+        <td><%= link_to 'Edit', edit_male_transaksi_path(male_transaksi) %></td>
+        <td><%= link_to 'Destroy', male_transaksi, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
+    </tbody>
+  </table>
+</div>

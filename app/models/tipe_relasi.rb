@@ -1,0 +1,2 @@
+class TipeRelasi < ApplicationRecord
+end

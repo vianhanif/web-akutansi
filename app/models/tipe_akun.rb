@@ -1,0 +1,2 @@
+class TipeAkun < ApplicationRecord
+end

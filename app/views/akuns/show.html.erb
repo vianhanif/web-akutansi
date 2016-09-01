@@ -1,0 +1,26 @@
+<div class="page-header">
+  <%= link_to akuns_path, class: 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Back
+  <% end %>
+  <%= link_to edit_akun_path(@akun), class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-pencil"></span>
+    Edit
+  <% end %>
+  <h1>Show akun</h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Kode:</dt>
+  <dd><%= @akun.kode %></dd>
+
+  <dt>Nama:</dt>
+  <dd><%= @akun.nama %></dd>
+
+  <dt>Tipe akun:</dt>
+  <dd><%= @akun.tipe_akun %></dd>
+
+  <dt>User:</dt>
+  <dd><%= @akun.user %></dd>
+
+</dl>

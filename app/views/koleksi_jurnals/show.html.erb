@@ -1,0 +1,17 @@
+<div class="page-header">
+  <%= link_to koleksi_jurnals_path, class: 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Back
+  <% end %>
+  <%= link_to edit_koleksi_jurnal_path(@koleksi_jurnal), class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-pencil"></span>
+    Edit
+  <% end %>
+  <h1>Show koleksi_jurnal</h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>User:</dt>
+  <dd><%= @koleksi_jurnal.user %></dd>
+
+</dl>

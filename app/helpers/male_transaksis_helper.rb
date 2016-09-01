@@ -1,0 +1,2 @@
+module MaleTransaksisHelper
+end

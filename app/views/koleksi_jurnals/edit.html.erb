@@ -1,0 +1,13 @@
+<div class="page-header">
+  <%= link_to koleksi_jurnals_path, class: 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Back
+  <% end %>
+  <%= link_to @koleksi_jurnal, class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-info-sign"></span>
+    Show
+  <% end %>
+  <h1>Editing koleksi_jurnal</h1>
+</div>
+
+<%= render 'form' %>
